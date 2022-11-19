@@ -7,7 +7,7 @@ use std::path::PathBuf;
 use std::time::{Duration, Instant};
 use std::{cmp, env, fs, io};
 
-const VERSION: &str = "1.0";
+
 const TAB_STOP: usize = 8;
 const QUIT_TIMES: u8 = 3;
 
@@ -512,7 +512,7 @@ impl Output {
             let file_row = i + self.cursor_controller.row_offset;
             if file_row >= self.editor_rows.number_of_rows() {
                 if self.editor_rows.number_of_rows() == 0 && i == screen_rows / 3 {
-                    let mut welcome = format!("Editor for Juspay Round_B {}", VERSION);
+                    let mut welcome = format!("Editor for Juspay Round_B");
                     if welcome.len() > screen_columns {
                         welcome.truncate(screen_columns)
                     }
